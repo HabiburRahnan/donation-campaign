@@ -4,7 +4,7 @@ import CardItem from "../../components/CardItem/CardItem";
 
 const Home = () => {
   const donationItem = useLoaderData();
-  console.log(donationItem);
+  // console.log(donationItem);
   return (
     <div>
       <Banner></Banner>

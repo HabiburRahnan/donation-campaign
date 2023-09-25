@@ -6,11 +6,11 @@ const CardItem = ({ donationItem }) => {
   //   const { Picture, Title, Category } = donationItem;
   return (
     <div>
-      <h1>donation item : {donationItem.length}</h1>
-
-      {donationItem.map((donation) => (
-        <DonationCard key={donation.id} donation={donation}></DonationCard>
-      ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10 gap-10">
+        {donationItem.map((donation) => (
+          <DonationCard key={donation.id} donation={donation}></DonationCard>
+        ))}
+      </div>
     </div>
   );
 };
