@@ -28,7 +28,7 @@ const Statistics = () => {
       ]}
     />
   ) : (
-    <p>kjsfdagjfasd</p>
+    <p>you have not donate anything</p>
   );
 
   return (
