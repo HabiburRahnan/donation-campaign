@@ -1,32 +1,24 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import { useEffect, useState } from "react";
 
-const HandleClick = (donation) => {
-  const { Picture, Description, Price, Title } = donation;
+import { useLoaderData, useParams } from "react-router-dom";
+import DonationSingle from "./DonationSingle";
 
+const HandleClick = () => {
+  const [singleCard, setSingleCard] = useState({});
+  const { id } = useParams();
+  const donations = useLoaderData();
+  console.log(id);
+
+  useEffect(() => {
+    const finDonation = donations?.find((donation) => donation.id == id);
+
+    setSingleCard(finDonation);
+  }, [id, donations]);
+  // console.log(finPhone);
+  console.log(singleCard);
   return (
     <div>
-      <Card className="mt-6 w-96">
-        <CardHeader color="blue-gray" className="relative h-56">
-          <img src={Picture} alt="card-image" />
-          <button>Donate {Price}</button>
-        </CardHeader>
-        <CardBody>
-          <Typography variant="h5" color="blue-gray" className="mb-2">
-            {Title}
-          </Typography>
-          <Typography>{Description}</Typography>
-        </CardBody>
-        <CardFooter className="pt-0">
-          <Button>Read More</Button>
-        </CardFooter>
-      </Card>
+      <DonationSingle singleCard={singleCard}></DonationSingle>
     </div>
   );
 };
