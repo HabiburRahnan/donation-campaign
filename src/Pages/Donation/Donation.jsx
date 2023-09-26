@@ -11,6 +11,7 @@ const Donation = () => {
     const donation = JSON.parse(localStorage.getItem("donation"));
     if (donation) {
       setDonationItem(donation);
+     
     } else {
       setNoFound("no data found");
     }
@@ -42,6 +43,7 @@ const Donation = () => {
           {isShow ? "See Less" : "See All"}
         </button>
       )}
+      
     </div>
   );
 };

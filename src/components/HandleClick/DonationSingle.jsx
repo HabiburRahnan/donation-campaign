@@ -43,7 +43,10 @@ const DonationSingle = ({ singleCard }) => {
         <CardHeader color="blue-gray" className="relative   md:w-full">
           <img className=" md:h-[45vh] w-full" src={Picture} alt="card-image" />
           <div>
-            <div onClick={donationAddMsg}>
+            <div
+              onClick={donationAddMsg}
+              style={{ backgroundColor: "rgba(11, 11, 11, 0.5)" }}
+              className="relative bottom-0 left-0">
               <button
                 onClick={handleAddDonation}
                 style={{ background: Category_bg }}
