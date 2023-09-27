@@ -1,6 +1,12 @@
 import { Button, Input } from "@material-tailwind/react";
 
 const Banner = () => {
+  const handleSearch = () => {
+    const searchField = document.getElementById("search-field");
+    const searchText = searchField.value;
+    console.log(searchText);
+  };
+
   return (
     <div className=" max-w-[1200px]  mx-auto">
       <div className=" py-32 md:py-40 h-0 md:h-3/5 md:ml-0 bg-opacity-100  bg-[url('https://i.ibb.co/rwZ7rNx/cover.jpg')] ">
@@ -10,6 +16,7 @@ const Banner = () => {
         <div className="items-center flex justify-center md:mt-16">
           <div className="relative  flex  w-full gap-2 md:w-max">
             <Input
+              id="search-field"
               type="search"
               label="Type here..."
               className="pr-20"
@@ -17,7 +24,10 @@ const Banner = () => {
                 className: "min-w-[288px]",
               }}
             />
-            <Button size="sm" className="!absolute right-1 top-1 rounded">
+            <Button
+              onClick={handleSearch}
+              size="sm"
+              className="!absolute right-1 top-1 rounded">
               Search
             </Button>
           </div>
