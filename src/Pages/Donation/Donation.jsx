@@ -11,7 +11,6 @@ const Donation = () => {
     const donation = JSON.parse(localStorage.getItem("donation"));
     if (donation) {
       setDonationItem(donation);
-     
     } else {
       setNoFound("no data found");
     }
@@ -40,10 +39,9 @@ const Donation = () => {
         <button
           onClick={() => setIsShow(!isShow)}
           className="btn text-white block  items-center mx-auto bg-green-600  hover:bg-green-600 ">
-          {isShow ? "See Less" : "See All"}
+          {isShow ? "hidden" : "See All"}
         </button>
       )}
-      
     </div>
   );
 };

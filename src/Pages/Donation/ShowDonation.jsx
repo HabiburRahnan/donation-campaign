@@ -34,7 +34,7 @@ const ShowDonation = ({ item }) => {
             ${Price}
           </p>
           <Link to={`/handleclick/${id}`}>
-            <div className="card-actions justify-end">
+            <div className="card-actions ">
               <button
                 style={{ background: Category_bg }}
                 className="btn btn-primary text-white">

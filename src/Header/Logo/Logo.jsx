@@ -3,7 +3,7 @@ const Logo = () => {
     <div>
       <img
         className="-mt-16  md:-mt-0 ml-16 md:ml-0 w-40 md:w-40 "
-        src="/src/assets/Logo.png"
+        src="https://i.ibb.co/HVBCLTY/Logo.png"
         alt=""
       />
     </div>

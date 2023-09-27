@@ -32,10 +32,14 @@ const Statistics = () => {
   );
 
   return (
-    <div className="h-screen-50px items-center  justify-center ">
-      <div className="w-2/4 ">{data}</div>
-      <div>
-        <h1 className="border-x-4 to-blue-gray-800">Your Donation</h1>
+    <div className="h-screen-50px flex items-center  justify-center">
+      <div className="w-1/3 ">
+        {data}
+
+        <div className="flex gap-5 md:text-2xl md:mt-10">
+          <h1 className=" border-b-4 border-[#FF444A]">Total Donation</h1>
+          <h1 className=" border-b-4 border-[#00C49F]"> Your Donation</h1>
+        </div>
       </div>
     </div>
   );
